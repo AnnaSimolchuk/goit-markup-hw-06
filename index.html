@@ -421,12 +421,33 @@
 
         <div>
           <p class="footer-text"><b>Подпишитесь на рассылку</b></p>
-          <a href="" class="icon-send"> Подписаться <svg class="submit" width="24px" height="24px">
+          <form class="js-speaker-form">
+            <input type="email" class="form-input" name="email" placeholder="Email"/>
+
+            <button type="submit" class="icon-send">Подписаться<svg class="submit" width="24px" height="24px">
                   <use href=./images/sprite.svg#send></use> 
-                </svg></a>
+                </svg></button>
+          </form>
         </div>
       </div>
       <p class="copyright">2020 | Developed by GoIT Students</p>
     </footer>
+
+    <script>
+      (() => {
+        document
+          .querySelector('.js-speaker-form')
+          .addEventListener('submit', e => {
+            e.preventDefault();
+
+            new FormData(e.currentTarget).forEach((value, name) =>
+              console.log(`${name}: ${value}`),
+            );
+
+            e.currentTarget.reset();
+          });
+      })();
+    </script>
+
   </body>
 </html>
