@@ -138,6 +138,7 @@
 .form-label {
   position: absolute;
   top: 50%;
+  left: 0;
   margin-left: 42px;
   transform: translateY(-50%);
 
@@ -145,16 +146,25 @@
   line-height: 16px;
   letter-spacing: 0.01em;
   color: #757575;
+
+  transition: all 250ms var(--cubic);
+}
+
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+  transform: translate(-24px, -40px);
+  color: var(--accent);
 }
 
 .form-icon {
   position: absolute;
-  left: 16px;
   top: 50%;
+  left: 16px;
   transform: translateY(-50%);
 }
 
 .form-input {
+  padding: 12px 15px 12px 42px;
   width: 448px;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -186,6 +196,14 @@
   line-height: 16px;
   letter-spacing: 0.01em;
   color: #757575;
+
+  transition: all 250ms var(--cubic);
+}
+
+.form-textarea:focus + .textarea-label,
+.form-textarea:not(:placeholder-shown) + .textarea-label {
+  transform: translate(-5px, -32px);
+  color: var(--accent);
 }
 
 .policy {
