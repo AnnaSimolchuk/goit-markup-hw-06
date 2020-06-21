@@ -431,12 +431,11 @@
           </form>
         </div>
       </div>
-      <p class="copyright">2020 | Developed by GoIT Students</p>
     </footer>
 
     <div class="backdrop is-hidden" data-modal>
           <div class="modal">
-              <button class="close-modal" data-modal-close><svg class="close" width="30px" height="30px">
+              <button class="close-modal" type="button" data-modal-close><svg width="30px" height="30px">
                   <use href=./images/sprite.svg#close></use> 
                 </svg></button>
               
@@ -474,8 +473,9 @@
 
                 <div class="policy">
                   <label class="policy-label">
-                    <input type="checkbox" class="policy-input" name="policy">
-                    <span class="policy-text">Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a></span>
+                    <input class="checkbox" type="checkbox" name="policy">
+                    <span class="checkbox-icon"></span>
+                    <span class="policy-text">Соглашаюсь с рассылкой и принимаю <a class="policy-link" href="">Условия договора</a></span>
                   </label>
                 </div>
 

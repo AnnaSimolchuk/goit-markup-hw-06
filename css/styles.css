@@ -118,11 +118,17 @@
 
   border-radius: 50%;
   padding: 0;
-  border: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   background: #ffffff;
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 1px 3px rgba(0, 0, 0, 0.12);
   cursor: pointer;
+
+  transition: all 250ms var(--cubic);
+}
+
+.close-modal:hover {
+  --color2: var(--accent);
 }
 
 .modal-title {
@@ -179,6 +185,8 @@
   border: 1px solid rgba(33, 33, 33, 0.2);
   background: #ffffff;
   border-radius: 4px;
+
+  transition: all 250ms var(--cubic);
 }
 
 .textarea-field {
@@ -194,6 +202,8 @@
   border: 1px solid rgba(33, 33, 33, 0.2);
   background: #ffffff;
   border-radius: 4px;
+
+  transition: all 250ms var(--cubic);
 }
 
 .textarea-label {
@@ -216,8 +226,43 @@
 }
 
 .policy {
-  position: relative;
   margin-bottom: 30px;
+  position: relative;
+}
+
+.policy-label {
+  display: inline-flex;
+  align-items: center;
+}
+
+.checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.checkbox-icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 8px;
+  border: 2px solid #212121;
+  border-radius: 2px;
+
+  transition: all 250ms var(--cubic);
+}
+
+.checkbox:checked + .checkbox-icon {
+  background-color: var(--accent);
+  border-color: transparent;
+  background-image: url(../images/checkmark.svg);
+  background-size: contain;
+  background-origin: border-box;
 }
 
 .policy-text {
@@ -225,6 +270,17 @@
   line-height: 1.7;
   letter-spacing: 0.03em;
   color: #757575;
+
+  transition: transform 250ms var(--cubic);
+}
+
+.checkbox:checked ~ .policy-text {
+  transform: translateX(5px);
+}
+
+.policy-link {
+  color: var(--accent);
+  text-decoration: underline;
 }
 
 .modal-button {
@@ -246,6 +302,11 @@
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   cursor: pointer;
   border: transparent;
+}
+
+.modal-button:hover,
+.modal-button:focus {
+  background-color: #188ce8;
 }
 
 /* Section Benefits*/
