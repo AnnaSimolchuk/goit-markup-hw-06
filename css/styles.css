@@ -115,6 +115,8 @@
   position: absolute;
   top: 8px;
   right: 8px;
+  width: 30px;
+  height: 30px;
 
   border-radius: 50%;
   padding: 0;
@@ -128,7 +130,7 @@
 }
 
 .close-modal:hover {
-  --color2: var(--accent);
+  fill: var(--accent);
 }
 
 .modal-title {
